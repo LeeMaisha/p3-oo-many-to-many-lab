@@ -1,4 +1,4 @@
-from many_to_many import Author, Book, Contract
+from lib.many_to_many import Author, Book, Contract
 import pytest
 
 def test_book_init():
@@ -18,6 +18,7 @@ def test_contract_init():
     date = '01/01/2001'
     royalties = 40000
     contract = Contract(author, book, date, royalties)
+
 
     assert contract.author == author
     assert contract.book == book
